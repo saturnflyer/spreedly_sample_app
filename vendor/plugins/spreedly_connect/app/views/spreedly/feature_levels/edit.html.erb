@@ -1,0 +1,12 @@
+<h1>Editing feature_level</h1>
+
+<% form_for(@feature_level, :url => ['spreedly', @feature_level]) do |f| %>
+  <%= f.error_messages %>
+  <%= render 'form', :f => f %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', ['spreedly', @feature_level] %> |
+<%= link_to 'Back', spreedly_feature_levels_path %>

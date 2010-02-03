@@ -1,0 +1,12 @@
+This Spreedly Sample App will show you how to create an application that connects to the Spreedly API.
+
+It uses the rspreedly gem.
+
+You must set these environment variables for the user that runs this application. Here is an example for bash:
+
+    export SPREEDLY_API_TOKEN=yourlongtokenstringhere
+    export SPREEDLY_SITE_NAME=sitenameusedinspreedlyurls
+
+In your Spreedly account, you'll need to set the "Subscribers Changed Notification URL" to the one created by your routes. Your routes file by default will create a path for this purpose at "/users/yourlongtokenstringhere" to which Spreedly may post an updated user list. If you don't want to use your API key, you should use some other non-guessable string to prevent attacks on your site from causing unusual and unnecessary requests to the Spreedly API.
+
+Built by Saturn Flyer http://www.saturnflyer.com

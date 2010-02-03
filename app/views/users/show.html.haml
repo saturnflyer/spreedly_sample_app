@@ -1,0 +1,30 @@
+%h1= greeting
+
+%p 
+  Email:
+  =h @user.email
+  
+- if @subscriber
+  %h2 
+    Service Level: 
+    = @user.feature_level.titlecase
+- else
+  %p Not a Subscriber
+- @plans.each do |plan|
+  %div{:id => "plan_#{plan.id}"}
+    - if @user.feature_level == plan.feature_level
+      = plan.name
+    - else
+      = link_to plan.name, @user.upgrade_url(plan)
+    %p
+      Price:
+      = plan.price
+    %p= plan.description
+    %ul
+      - feature_level = FeatureLevel.first(:conditions => {:name => plan.feature_level})
+      - feature_level.feature_attributes.each do |attribute|
+        %li
+          %strong= attribute.name
+          = attribute.description
+
+= link_to 'Edit', edit_account_path

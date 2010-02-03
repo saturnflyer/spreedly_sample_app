@@ -1,0 +1,2 @@
+module Spreedly::FeatureAttributesHelper
+end

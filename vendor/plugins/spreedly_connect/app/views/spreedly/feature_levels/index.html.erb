@@ -1,0 +1,18 @@
+<h1>Listing feature_levels</h1>
+<%= link_to "Reload from Spreedly", gather_spreedly_feature_levels_path, :method => :post %>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @feature_levels.each do |feature_level| %>
+  <tr>
+    <td><%=link_to(h(feature_level.name), spreedly_feature_level_path(feature_level)) %> (<%= link_to 'delete', spreedly_feature_level_path(feature_level), :method => :delete, :confirm => 'Are you sure?' %>)</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New feature_level', new_spreedly_feature_level_path %>

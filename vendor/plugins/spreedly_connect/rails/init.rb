@@ -1,0 +1,1 @@
+require 'spreedly_connect'

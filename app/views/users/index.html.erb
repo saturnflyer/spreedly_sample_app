@@ -1,0 +1,9 @@
+<h1>Users</h1>
+<% unless @users.blank? -%>
+  <ul>
+    <% @users.each do |user| -%>
+      <li><%= link_to user.display_name, user %>: <%= user.subscription_record.try(:feature_level) %></li>
+    <% end -%>
+  </ul>
+<% else -%>
+<% end -%>

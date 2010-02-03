@@ -1,0 +1,24 @@
+<h1>Listing feature_attributes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Feature level</th>
+  </tr>
+
+<% @feature_attributes.each do |feature_attribute| %>
+  <tr>
+    <td><%=h feature_attribute.name %></td>
+    <td><%=h feature_attribute.description %></td>
+    <td><%=h feature_attribute.feature_level_id %></td>
+    <td><%= link_to 'Show', feature_attribute %></td>
+    <td><%= link_to 'Edit', edit_feature_attribute_path(feature_attribute) %></td>
+    <td><%= link_to 'Destroy', feature_attribute, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New feature_attribute', new_feature_attribute_path %>

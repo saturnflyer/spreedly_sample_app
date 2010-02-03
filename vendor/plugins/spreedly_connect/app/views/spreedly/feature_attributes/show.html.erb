@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @feature_attribute.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @feature_attribute.description %>
+</p>
+
+<p>
+  <b>Feature level:</b>
+  <%=h @feature_attribute.feature_level_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_feature_attribute_path(@feature_attribute) %> |
+<%= link_to 'Back', feature_attributes_path %>

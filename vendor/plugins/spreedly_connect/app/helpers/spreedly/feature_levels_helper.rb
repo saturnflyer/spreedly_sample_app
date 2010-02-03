@@ -1,0 +1,2 @@
+module Spreedly::FeatureLevelsHelper
+end
